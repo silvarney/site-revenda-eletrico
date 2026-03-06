@@ -62,4 +62,4 @@ Thumbs.db
 # IDEs
 # ==========================================
 .vscode/
-.idea/wordpress/wp-content/themes/veiculos-tema/tailwindcss-linux-x64
+wordpress/wp-content/themes/veiculos-tema/tailwindcss-linux-x64
