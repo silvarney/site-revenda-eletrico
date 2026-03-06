@@ -1,0 +1,65 @@
+# ==========================================
+# Ignorar tudo por padrão
+# ==========================================
+*
+
+# ==========================================
+# Permitir arquivos essenciais da raiz
+# ==========================================
+!.gitignore
+!docker-compose.yml
+
+# ==========================================
+# Liberar wordpress/ (vamos filtrar dentro dele)
+# ==========================================
+!wordpress/
+
+# ==========================================
+# Ignorar todo conteúdo dentro de wordpress/
+# ==========================================
+wordpress/*
+
+# ==========================================
+# Liberar wp-content específico
+# ==========================================
+!wordpress/wp-content/
+wordpress/wp-content/*
+
+# Plugins e temas que queremos monitorar
+!wordpress/wp-content/plugins/
+!wordpress/wp-content/plugins/veiculos-plugin/
+!wordpress/wp-content/plugins/veiculos-plugin/**
+
+!wordpress/wp-content/themes/
+!wordpress/wp-content/themes/veiculos-tema/
+!wordpress/wp-content/themes/veiculos-tema/**
+
+# ==========================================
+# Ignorar uploads, cache e upgrade do WP
+# ==========================================
+wordpress/wp-content/uploads/
+wordpress/wp-content/cache/
+wordpress/wp-content/upgrade/
+
+# ==========================================
+# Node e dependências do Tailwind/PostCSS
+# ==========================================
+node_modules/
+npm-debug.log
+yarn.lock
+package-lock.json
+dist/
+build/
+
+# ==========================================
+# Logs e arquivos de sistema
+# ==========================================
+*.log
+.DS_Store
+Thumbs.db
+
+# ==========================================
+# IDEs
+# ==========================================
+.vscode/
+.idea/
