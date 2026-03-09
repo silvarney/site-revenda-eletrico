@@ -7,15 +7,11 @@ document.addEventListener("DOMContentLoaded", function(){
         e.preventDefault();
 
         const formData = new FormData(form);
+        formData.append("action", "filtrar_veiculos");
 
         fetch(ajax_object.ajaxurl, {
             method: "POST",
-            body: new URLSearchParams({
-                action: "filtrar_veiculos",
-                marca: formData.get("marca"),
-                preco_min: formData.get("preco_min"),
-                preco_max: formData.get("preco_max")
-            })
+            body: formData
         })
         .then(res => res.text())
         .then(html => {
