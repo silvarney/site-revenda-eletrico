@@ -12,7 +12,9 @@ document.addEventListener("DOMContentLoaded", function(){
             method: "POST",
             body: new URLSearchParams({
                 action: "filtrar_veiculos",
-                marca: formData.get("marca")
+                marca: formData.get("marca"),
+                preco_min: formData.get("preco_min"),
+                preco_max: formData.get("preco_max")
             })
         })
         .then(res => res.text())
