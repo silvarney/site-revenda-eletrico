@@ -58,14 +58,17 @@ function veiculos_filtrar_ajax()
             $query->the_post();
             get_template_part('template-parts/veiculo-card');
         }
-        if ($query->max_num_pages > $paged) {
+        if ($query->max_num_pages > 1) {
             echo '<div class="pagination">';
             echo paginate_links([
-                'base' => '%_%',
-                'format' => '?paged=%#%',
-                'current' => $paged,
-                'total' => $query->max_num_pages,
-                'type' => 'list'
+                'base'      => home_url('/estoque/') . '%_%',
+                'format'    => '?paged=%#%',
+                'total'     => $query->max_num_pages,
+                'current'   => max(1, $paged),
+                'mid_size'  => 2,
+                'prev_text' => '«',
+                'next_text' => '»',
+                'type'      => 'list',
             ]);
             echo '</div>';
         }

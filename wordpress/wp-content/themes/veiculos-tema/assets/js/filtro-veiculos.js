@@ -15,12 +15,7 @@ document.addEventListener("DOMContentLoaded", function(){
         .then(res => res.text())
         .then(html => {
 
-            resultado.innerHTML = html;           
-
-            window.scrollTo({
-                top: resultado.offsetTop,
-                behavior: "smooth"
-            });
+            resultado.innerHTML = html;     
 
         });
     }
@@ -29,16 +24,16 @@ document.addEventListener("DOMContentLoaded", function(){
 
         e.preventDefault();
 
-        carregarVeiculos(1);
+        carregarVeiculos();
 
     });
 
     resultado.addEventListener("click", function(e){
 
-        const link = e.target.closet("page-numbers");
+        const link = e.target.closet(".pagination a");
 
         if(!link) return;
-            
+         
         e.preventDefault();
         
         const url = new URL(e.target.href);

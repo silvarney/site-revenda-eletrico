@@ -38,6 +38,9 @@ $dados = vp_get_dados_filtros();
     
     <div id="resultado-veiculos" class="grid grid-cols-3 lg:grid-cols-4 gap-6 mt-6 p-4">
         <?php get_template_part('template-parts/lista-veiculos'); ?>
+        <div class="paginacao">
+            <?php paginate_links() ?>
+        </div>
     </div>
 
 </div>
