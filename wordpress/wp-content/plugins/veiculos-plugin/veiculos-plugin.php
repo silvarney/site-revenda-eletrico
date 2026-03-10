@@ -11,7 +11,6 @@ define('VP_PATH', plugin_dir_path(__FILE__));
 define('VP_URL', plugin_dir_url(__FILE__));
 
 require_once VP_PATH . 'includes/init.php';
-//require_once VP_PATH . 'includes/cpt.php';
 require_once VP_PATH . 'includes/taxonomies.php';
 require_once VP_PATH . 'includes/shortcodes.php';
 require_once VP_PATH . 'includes/post-type-veiculos.php';
